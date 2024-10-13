@@ -10,3 +10,27 @@ export async function fetchWeatherData(city) {
 
     return await response.json();
 }
+
+
+// New function to save a favorite city
+export async function saveFavoriteCity(city) {
+    const url = 'https://jsonplaceholder.typicode.com/posts'; // Example endpoint
+    const data = {
+        city: city,
+        userId: 1, // You can use this to relate to a user
+    };
+    
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+        throw new Error('Failed to save favorite city');
+    }
+
+    return await response.json(); // Return the response data
+}
