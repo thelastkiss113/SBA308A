@@ -26,7 +26,7 @@ input {
 
 button {
     padding: 10px;
-    background-color: #ffb3ba; /* Pastel pink */
+    background-color: #b066bb; 
     border: none;
     border-radius: 5px;
     color: white;
@@ -35,6 +35,6 @@ button {
 }
 
 button:hover {
-    background-color: #ff9999; /* Slightly darker pink on hover */
+    background-color: #e761c5;
 }
 
