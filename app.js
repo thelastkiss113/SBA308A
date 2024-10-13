@@ -1,5 +1,5 @@
 import { saveHistory, getHistory } from './history.js';
-import { getWeather } from './weather.js';
+import { fetchWeatherData as getWeather } from './weather.js';
 
 const cityInput = document.getElementById('cityInput');
 const searchButton = document.getElementById('searchButton');
