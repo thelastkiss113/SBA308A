@@ -1,36 +1,47 @@
-const apiKey = '8d70c99c11d66feefd0e7fdcc0b19a36';
+const apiKey = "8d70c99c11d66feefd0e7fdcc0b19a36";
 
+/*************  ✨ Codeium Command 🌟  *************/
+/**
+ * Fetches weather data from OpenWeatherMap API
+ *
+ */
 export async function fetchWeatherData(city) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    const response = await fetch(url);
+  // Construct the URL for the API request
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-    if (!response.ok) {
-        throw new Error('City not found');
-    }
+  // Make the request to the API
+  const response = await fetch(url);
 
-    return await response.json();
+  // Check if the response was successful
+  if (!response.ok) {
+    // Throw an error if the response was not successful
+    throw new Error("City not found");
+  }
+
+  // Return the JSON response from the API
+  return await response.json();
 }
-
+/******  0f45fa0a-38d4-446c-832d-66d0005fd19a  *******/
 
 // New function to save a favorite city
 export async function saveFavoriteCity(city) {
-    const url = 'https://jsonplaceholder.typicode.com/posts'; // Example endpoint
-    const data = {
-        city: city,
-        userId: 1, // You can use this to relate to a user
-    };
-    
-    const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    });
+  const url = "https://jsonplaceholder.typicode.com/posts"; // Example endpoint
+  const data = {
+    city: city,
+    userId: 1, // You can use this to relate to a user
+  };
 
-    if (!response.ok) {
-        throw new Error('Failed to save favorite city');
-    }
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
 
-    return await response.json(); // Return the response data
+  if (!response.ok) {
+    throw new Error("Failed to save favorite city");
+  }
+
+  return await response.json(); // Return the response data
 }

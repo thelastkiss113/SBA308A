@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pastel Weather App</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <script src="app.js" type="module" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app">
-        <h1> Weather Whimsy </h1>
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <button id="searchButton">Search</button>
-        <button id="saveButton" style="display:none;">Save as Favorite</button>
-        <div id="weatherDisplay"></div> 
-        <h2>Search History</h2>
-        <ul id="historyList"></ul>
+      <h1>Weather Whimsy</h1>
+      <h2>Your Favorite Cities</h2>
+      <ul id="favoriteCitiesList"></ul>
+
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button id="searchButton">Search</button>
+      <button id="saveButton">Save as Favorite</button>
+
+      <div id="weatherDisplay"></div>
+      <h2>Search History</h2>
+      <ul id="historyList"></ul>
     </div>
-</body>
+  </body>
 </html>
